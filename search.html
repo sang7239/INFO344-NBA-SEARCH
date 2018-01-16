@@ -1,0 +1,22 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Search NBA players</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <script type="text/javascript" src="search.js"></script>
+</head>
+<body>
+    <div id="logo">
+        <img src="img/logo-NBA.jpg" alt="logo"/>
+    </div>
+    <form method="post" action="dbmanager.php">
+        <input type="text" name="search" class='search_box' placeholder="search player here"/>
+        <input type="submit" value="Search" class="search_button" />
+    </form> 
+    <div id="results"></div>
+</body>
+</html>
