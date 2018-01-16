@@ -7,9 +7,10 @@ try {
 }
 include_once('player.php');
 $output = '';
+$grace = 2;
 if (isset($_POST['search'])){
     $search = $_POST['search'];
-    $stmt = $conn -> query("SELECT * FROM NBA_PLAYERS WHERE levenshtein(Name, '$search') < 2 || levenshtein(Fname, '$search') < 2 || levenshtein(Lname, '$search') < 2"); 
+    $stmt = $conn -> query("SELECT * FROM NBA_PLAYERS WHERE levenshtein(Name, '$search') < $grace || levenshtein(Fname, '$search') < $grace || levenshtein(Lname, '$search') < $grace"); 
     if ($stmt -> rowCount() == 0) {
         echo "<br /> No Player Found";
     } else {
