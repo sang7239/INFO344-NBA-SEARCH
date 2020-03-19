@@ -1,2 +1,2 @@
-# INFO344-NBA-SEARCH
+# INBA-SEARCH-APP
 NBA Player Search
